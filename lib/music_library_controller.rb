@@ -51,6 +51,7 @@ class MusicLibraryController
     end
   end
 
+<<<<<<< HEAD
   def list_genres
     Genre.all.uniq.sort_by(&:name).each.with_index(1) do |genre, index|
       puts "#{index}. #{genre.name}"
@@ -88,6 +89,14 @@ def play_song
     end
   puts "Playing #{song.name} by #{song.artist.name}" if song
 end
+=======
+  def list_songs
+    Song.all.sort_by(&:name).each_with_index do |song, index|
+      puts "#{index + 1}. #{song}"
+
+  end
+  end
+>>>>>>> f99053dc562a4ddbaec425802cb121ba182d0392
 
 
 
